@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:id="@+id/actionbarTitleText"
+        android:layout_width="200dp"
+        android:layout_height="56dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical"
+        android:textSize="20dp"
+        android:textColor="@color/colorText"
+        android:textStyle="bold"
+        android:text="액션바 타이틀" />
+
+    <ImageButton
+        android:id="@+id/homeBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/home"
+        android:layout_alignParentRight="true"
+        android:onClick="onHomeBtnClicked"/>
+
+</RelativeLayout>

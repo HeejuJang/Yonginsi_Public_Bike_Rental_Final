@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorButton">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/round_square"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp">
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:text="아이디"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorButton"
+            android:gravity="center_vertical|right"
+            android:layout_marginHorizontal="15dp"
+            />
+        <EditText
+            android:id="@+id/joiningUserIdInput"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:inputType="text"
+            android:hint="영문소문자/숫자 4~16자"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="15sp"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/checkIdRedundantBtn"
+            android:layout_width="60dp"
+            android:layout_height="35dp"
+            android:text="중복확인"
+            android:textColor="@color/colorButtonText"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="15dp"
+            android:background="@color/colorButton"
+            android:onClick="onCheckIdRedundantBtnClicked"
+            />
+     </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/round_square"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="20dp">
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:text="비밀번호"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorButton"
+                android:gravity="center_vertical|right"
+                android:layout_marginHorizontal="15dp"
+                />
+            <EditText
+                android:id="@+id/joiningUserPasswordInput"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textPassword"
+                android:hint="영문/숫자/특수문자 8자~16자"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/round_square"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="20dp">
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:text="이     름"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorButton"
+            android:gravity="center_vertical|right"
+            android:layout_marginHorizontal="15dp"
+            />
+        <EditText
+            android:id="@+id/joiningUserNameInput"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text"
+            android:hint="이름 입력"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/round_square"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="20dp">
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:text="휴대전화"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorButton"
+            android:gravity="center_vertical|right"
+            android:layout_marginHorizontal="15dp"
+            />
+        <EditText
+            android:id="@+id/joiningUserPhoneInput"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="phone"
+            android:hint="'-'를 제외한 번호 입력"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/round_square"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="20dp">
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:text="체     중"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorButton"
+            android:gravity="center_vertical|right"
+            android:layout_marginHorizontal="15dp"
+            />
+        <EditText
+            android:id="@+id/joiningUserWeightInput"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:inputType="numberDecimal"
+            android:hint="소숫점을 제외한 체중 입력"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="15sp"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="kg"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorButton"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginHorizontal="15dp"
+            />
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="결과 나오는 곳"
+        android:textColor="@color/colorButton"
+        android:id="@+id/resultText"/>
+
+    <Button
+        android:id="@+id/joinBtn"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@drawable/round_square_login_btn"
+        android:text="회원가입"
+        android:textColor="@color/colorButtonText"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:onClick="onJoinBtnClicked"/>
+
+
+
+
+</LinearLayout>

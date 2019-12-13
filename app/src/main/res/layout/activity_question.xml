@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="주 소"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorSlidingPageAccent"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cityhall_addr"
+        android:textSize="20dp"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/colorText"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="민원 안내 콜센터"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorSlidingPageAccent"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/call_center_phone"
+        android:textSize="20dp"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/colorText"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="문자 상담"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorSlidingPageAccent"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/counsel_time"
+        android:textSize="20dp"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/colorText"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="대표 번호"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorSlidingPageAccent"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/city_hall_phone"
+        android:textSize="20dp"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/colorText"/>
+
+</LinearLayout>

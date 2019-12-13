@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorButton">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/yonginsi_logo2"
+        android:layout_marginTop="40dp"/>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/round_square"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="32dp"
+            android:layout_height="match_parent"
+            android:text="ID"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorButton"
+            android:gravity="center_vertical|right"
+            android:layout_marginHorizontal="15dp"
+            />
+        <EditText
+            android:id="@+id/userIdInput"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text"
+            android:hint="아이디를 입력하세요."
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="15sp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/round_square"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:layout_width="32dp"
+            android:layout_height="match_parent"
+            android:text="PW"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorButton"
+            android:gravity="center_vertical|right"
+            android:layout_marginHorizontal="15dp"
+            />
+        <EditText
+            android:id="@+id/userPasswordInput"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPassword"
+            android:hint="비밀번호를 입력하세요."
+            android:layout_marginRight="15dp"
+            android:textSize="15sp"
+            android:layout_marginBottom="5dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/realLoginBtn"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@drawable/round_square_login_btn"
+        android:text="로그인"
+        android:textColor="@color/colorButtonText"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:onClick="onRealLoginBtnClicked"/>
+
+    <TextView
+        android:id="@+id/findingLoginInfoTextBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/find_login_info"
+        android:textColor="@color/colorButtonText"
+        android:textSize="15dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/joinTextBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/join_app"
+        android:textColor="@color/colorButtonText"
+        android:textSize="15dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:onClick="onJoinTextBtnClicked"/>
+
+</LinearLayout>

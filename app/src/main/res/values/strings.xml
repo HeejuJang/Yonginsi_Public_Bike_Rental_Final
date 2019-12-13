@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Yonginsi_Public_Bike_Rental</string>
+    <string name="cityhall_addr">[17019] 경기도 용인시 처인구 중부대로 1199(삼가동)</string>
+    <string name="call_center_phone">1577-1122</string>
+    <string name="counsel_time">09:00 ~ 18:00</string>
+    <string name="city_hall_phone">031-324-2114</string>
+
+    <string name="find_login_info"><u>아이디/비밀번호 찾기</u></string>
+    <string name="join_app"><u>회원 가입</u></string>
+</resources>

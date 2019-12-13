@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--애니메이션 종료 후 상태 유지-->
+<!--애니메이션이 점점 빠르게 동작하다가 점점 천천히 동작-->
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillAfter="true"
+    android:interpolator="@android:anim/accelerate_decelerate_interpolator">
+    <!--왼쪽에서 오른쪽으로 0.5초간 이동-->
+    <translate
+        android:fromXDelta="-100%p"
+        android:toXDelta="0%p"
+        android:duration="500"
+        android:repeatCount="0"/>
+</set>

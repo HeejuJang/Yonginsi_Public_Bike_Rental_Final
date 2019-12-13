@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/round_square"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp">
+        <TextView
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:text="고장 제품"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorButton"
+            android:gravity="center_vertical|right"
+            android:layout_marginHorizontal="15dp"
+            />
+        <EditText
+            android:id="@+id/brokenBikeNumInput"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="numberDecimal"
+            android:hint="바이크 번호 입력"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/round_square"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="20dp">
+        <TextView
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:text="신고 사유"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorButton"
+            android:gravity="center_vertical|right"
+            android:layout_marginHorizontal="15dp"
+            />
+        <Spinner
+            android:id="@+id/reportSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/reportBtn"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:background="@drawable/round_square_login_btn"
+        android:text="신고하기"
+        android:textColor="@color/colorButtonText"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:onClick="onReportBtnClicked"/>
+
+</LinearLayout>

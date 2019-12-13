@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#e8eaf6</color>
+    <color name="colorPrimaryDark">#e8eaf6</color>
+    <color name="colorAccent">#ff5e73</color>
+    <color name="colorButton">#f9a825</color>
+    <color name="colorButtonText">#f8fdff</color>
+    <color name="colorText">#424242</color>
+
+    <color name="colorSlidingPage">#f8fdff</color>
+    <color name="colorSlidingText">#000000</color>
+    <color name="colorSlidingPageAccent">#1f5d9b</color>
+    <color name="colorSlidingBtn">#ffffff</color>
+
+    <color name="colorLoginPrimary">#f7ff8c</color>
+    <color name="colorLoginAccent">#ff5e73</color>
+</resources>

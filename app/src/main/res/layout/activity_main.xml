@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 일반 레이아웃 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <fragment
+                android:id="@+id/mainMap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                class="com.google.android.gms.maps.SupportMapFragment"/>
+
+            <ImageButton
+                android:src="@android:drawable/ic_menu_mylocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/curLocationBtn"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"/>
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:id="@+id/mainLoginBtn"
+            android:background="@color/colorButton"
+            android:text="로 그 인"
+            android:textColor="@color/colorButtonText"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:onClick="onMainLoginBtnClicked"/>
+    </LinearLayout>
+
+    <!-- 슬라이드 레이아웃 -->
+    <LinearLayout
+        android:id="@+id/slidingPage"
+        android:orientation="vertical"
+        android:background="@color/colorSlidingPage"
+        android:visibility="gone"
+        android:layout_gravity="left"
+        android:layout_width="260dp"
+        android:layout_height="match_parent">
+        <ImageButton
+            android:id="@+id/slideCloseBtn"
+            android:background="@drawable/cancel"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="right"
+            android:layout_margin="10dp"
+            android:onClick="onSlideCloseBtnClicked"/>
+        <TextView
+            android:id="@+id/slideUserNameText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="사용자 이름"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorSlidingText"
+            android:layout_marginLeft="15dp" />
+        <TextView
+            android:id="@+id/slideUserLoginText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="사용자 아이디"
+            android:textSize="15sp"
+            android:textColor="@color/colorSlidingPageAccent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="25dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="2dp"
+            android:background="@color/colorSlidingBtn">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이용 내역"
+                android:textSize="18sp"
+                android:textColor="@color/colorSlidingText"
+                android:layout_marginLeft="15dp"
+                android:layout_centerVertical="true" />
+            <ImageButton
+                android:id="@+id/sideHistoryBtn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/chevron_right"
+                android:gravity="right|center_vertical"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:onClick="onSideHistoryBtnClicked"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="2dp"
+            android:background="@color/colorSlidingBtn">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="고장 신고"
+                android:textSize="18sp"
+                android:textColor="@color/colorSlidingText"
+                android:layout_marginLeft="15dp"
+                android:layout_centerVertical="true" />
+            <ImageButton
+                android:id="@+id/sideReportBrokenBtn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/chevron_right"
+                android:gravity="right|center_vertical"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:onClick="onSideReportBrokenBtnClicked"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="2dp"
+            android:background="@color/colorSlidingBtn">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="문의 사항"
+                android:textSize="18sp"
+                android:textColor="@color/colorSlidingText"
+                android:layout_marginLeft="15dp"
+                android:layout_centerVertical="true" />
+            <ImageButton
+                android:id="@+id/sideQuestionBtn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/chevron_right"
+                android:gravity="right|center_vertical"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:onClick="onSideQuestionBtnClicked"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+</FrameLayout>

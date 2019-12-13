@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 일반 레이아웃 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <fragment
+                android:id="@+id/mainMap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                class="com.google.android.gms.maps.SupportMapFragment"/>
+
+            <ImageButton
+                android:src="@android:drawable/ic_menu_mylocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/curLocationBtn"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"/>
+        </RelativeLayout>
+
+        <!--프레임 레이아웃-->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--QR 코드 스캔 전-->
+            <LinearLayout
+                android:id="@+id/beforeScanView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+               <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:orientation="horizontal"
+                    android:background="@color/colorButton"
+                    android:gravity="center_vertical">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/credit_card"
+                        android:layout_marginHorizontal="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cardInfoText"
+                        android:text="등록된 카드가 없습니다."
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorSlidingText"
+                        android:layout_weight="1"/>
+                    <Button
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/registerCardBtn"
+                        android:text="등록"
+                        android:textSize="18sp"
+                        android:textColor="@color/colorButtonText"
+                        android:background="@drawable/round_square_login_btn"
+                        android:onClick="onRegisterCardBtnClicked"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="8dp"
+                        />
+                </LinearLayout>
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:id="@+id/qrCodeScanBtn"
+                    android:background="@color/colorLoginPrimary"
+                    android:src="@drawable/qr_scan"
+                    android:scaleType="fitCenter"
+                    android:paddingVertical="15dp"
+                    android:onClick="onQrCodeScanBtnClicked"/>
+            </LinearLayout>
+
+            <!--QR 코드 스캔 후-->
+            <LinearLayout
+                android:id="@+id/afterScanView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:orientation="vertical"
+                    android:background="@color/colorButtonText"
+                    android:gravity="center_vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:gravity="bottom">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="이용중"
+                            android:textSize="20sp"
+                            android:textColor="@color/colorText"
+                            android:layout_marginHorizontal="15dp"/>
+                        <TextView
+                            android:id="@+id/runningBikeNameText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="바이크_0100"
+                            android:textSize="20sp"
+                            android:textColor="@color/colorAccent"/>
+
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/runningTimeText"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:gravity="top|center_horizontal"
+                        android:text="00 : 00"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorSlidingText"
+                        android:textSize="40sp"/>
+
+                </LinearLayout>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:id="@+id/returnBikeBtn"
+                    android:background="@color/colorButton"
+                    android:text="반 납 하 기"
+                    android:textColor="@color/colorButtonText"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:onClick="onReturnBikeBtnClicked"/>
+            </LinearLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <!-- 슬라이드 레이아웃 -->
+    <LinearLayout
+        android:id="@+id/slidingPage"
+        android:orientation="vertical"
+        android:background="@color/colorSlidingPage"
+        android:visibility="gone"
+        android:layout_gravity="left"
+        android:layout_width="260dp"
+        android:layout_height="match_parent">
+        <ImageButton
+            android:id="@+id/slideCloseBtn"
+            android:background="@drawable/cancel"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="right"
+            android:layout_margin="10dp"
+            android:onClick="onSlideCloseBtnClicked"/>
+        <TextView
+            android:id="@+id/slideUserNameText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="홍길동"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorSlidingText"
+            android:layout_marginLeft="15dp" />
+        <TextView
+            android:id="@+id/slideUserLoginText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="guest01"
+            android:textSize="15sp"
+            android:textColor="@color/colorSlidingPageAccent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="25dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="2dp"
+            android:background="@color/colorSlidingBtn">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이용 내역"
+                android:textSize="18sp"
+                android:textColor="@color/colorSlidingText"
+                android:layout_marginLeft="15dp"
+                android:layout_centerVertical="true" />
+            <ImageButton
+                android:id="@+id/sideHistoryBtn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/chevron_right"
+                android:gravity="right|center_vertical"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:onClick="onSideHistoryBtnClicked"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="2dp"
+            android:background="@color/colorSlidingBtn">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="고장 신고"
+                android:textSize="18sp"
+                android:textColor="@color/colorSlidingText"
+                android:layout_marginLeft="15dp"
+                android:layout_centerVertical="true" />
+            <ImageButton
+                android:id="@+id/sideReportBrokenBtn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/chevron_right"
+                android:gravity="right|center_vertical"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:onClick="onSideReportBrokenBtnClicked"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="2dp"
+            android:background="@color/colorSlidingBtn">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="문의 사항"
+                android:textSize="18sp"
+                android:textColor="@color/colorSlidingText"
+                android:layout_marginLeft="15dp"
+                android:layout_centerVertical="true" />
+            <ImageButton
+                android:id="@+id/sideQuestionBtn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/chevron_right"
+                android:gravity="right|center_vertical"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:onClick="onSideQuestionBtnClicked"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+</FrameLayout>
